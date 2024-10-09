@@ -7,3 +7,5 @@ title.innerText = "Product Categories";
 title.classList.add('text-2xl');
 
 root.append(title);
+
+//comment
