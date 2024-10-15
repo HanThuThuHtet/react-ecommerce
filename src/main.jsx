@@ -1,11 +1,25 @@
 import { createElement } from 'react';
 import { createRoot } from 'react-dom/client';
+import {
+    createBrowserRouter,
+    RouterProvider
+} from "react-router-dom";
 import "./index.css";
-import App from './app';
+
+import router from './routes/Router';
 
 const categories = ["electronics","jewelery","men's clothing","women's clothing"];
 
 const root = document.querySelector('#root');
+
+
+createRoot(root).render(
+    <RouterProvider router={router} />
+);
+
+
+
+
 
 // //create view
 // const app = createElement(
@@ -16,8 +30,8 @@ const root = document.querySelector('#root');
 // );
 // console.log(app);
 
-//render view
-createRoot(root).render(App());
+// //render view
+// createRoot(root).render(App());
 
 
 // const root = document.querySelector('#root');

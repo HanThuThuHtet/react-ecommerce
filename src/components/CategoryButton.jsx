@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CategoryButton = ({name,current}) => {
+const CategoryButton = ({categoryName,current}) => {
   return (
     <div>
-        <button className={`${ current ? 'bg-black text-white' : ''} border text-nowarp px-4 py-2 me-2`}>
-            {name}
+        <button className={`${ current && 'bg-black text-white'} border text-nowrap px-4 py-2 me-2 `}>
+            {categoryName}
         </button>
     </div>
   )
