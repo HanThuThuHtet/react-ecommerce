@@ -4,11 +4,16 @@ import MyCart from '../pages/MyCart';
 import ProductDetails from '../pages/ProductDetails';
 import { createBrowserRouter} from "react-router-dom";
 import MainLayout from '../components/MainLayout';
+import ErrorPage from '../pages/ErrorPage';
 
 const router = createBrowserRouter([
     {
         path: "/",
+
         element: <MainLayout />,
+
+        errorElement: <ErrorPage />,
+        
         children: [
             {
                 path: "/",
@@ -23,7 +28,7 @@ const router = createBrowserRouter([
                 element: <MyCart />
             },
             {
-                path: "/product-details",
+                path: "/product-details/:productId", //dynamic route
                 element: <ProductDetails />
             }
         ]
